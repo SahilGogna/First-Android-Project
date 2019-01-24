@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMetric">
+
+
+    <TextView
+        android:id="@+id/metricLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/metric"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/meterLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/metricLabel"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/centiLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/centimeter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meterLable"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/meterLable"/>
+
+    <TextView
+        android:id="@+id/kilometerLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kilometer"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/centiLabel"
+        app:layout_constraintStart_toStartOf="@id/centiLabel"/>
+
+    <EditText
+        android:id="@+id/meterEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintTop_toTopOf="@id/meterLable"
+        app:layout_constraintBottom_toBottomOf="@id/meterLable"
+        app:layout_constraintLeft_toRightOf="@id/meterLable"
+        android:layout_marginLeft="60dp"/>
+
+    <TextView
+        android:id="@+id/convertedCenti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/centiLabel"
+        app:layout_constraintBottom_toBottomOf="@id/centiLabel"
+        app:layout_constraintLeft_toRightOf="@id/centiLabel"
+        app:layout_constraintStart_toStartOf="@id/meterEditText"
+        android:text="testing"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/convertedKilometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/kilometerLable"
+        app:layout_constraintBottom_toBottomOf="@id/kilometerLable"
+        app:layout_constraintLeft_toRightOf="@id/kilometerLable"
+        app:layout_constraintStart_toStartOf="@id/convertedCenti"
+        android:text="testing"
+        android:textSize="20dp"
+        />
+
+
+    <Button
+        android:id="@+id/convertMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/returnMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/returnButton"
+        app:layout_constraintTop_toTopOf="@id/convertMetric"
+        app:layout_constraintBottom_toBottomOf="@+id/convertMetric"
+        app:layout_constraintLeft_toRightOf="@+id/convertMetric"
+        android:layout_marginLeft="30dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

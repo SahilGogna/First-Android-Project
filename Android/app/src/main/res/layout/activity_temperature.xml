@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TemperatureActivity">
+
+    <TextView
+        android:id="@+id/tempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempLabel"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/celciusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/celciusLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tempLabel"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/fLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fLable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celciusLabel"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/celciusLabel"/>
+
+    <TextView
+        android:id="@+id/kLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kLabel"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fLabel"
+        app:layout_constraintStart_toStartOf="@id/fLabel"/>
+
+    <EditText
+        android:id="@+id/cEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintTop_toTopOf="@id/celciusLabel"
+        app:layout_constraintBottom_toBottomOf="@id/celciusLabel"
+        app:layout_constraintLeft_toRightOf="@id/celciusLabel"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/convertedF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/fLabel"
+        app:layout_constraintBottom_toBottomOf="@id/fLabel"
+        app:layout_constraintLeft_toRightOf="@id/fLabel"
+        app:layout_constraintStart_toStartOf="@id/cEditText"
+        android:text="testing"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/convertedK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/kLable"
+        app:layout_constraintBottom_toBottomOf="@id/kLable"
+        app:layout_constraintLeft_toRightOf="@id/kLable"
+        app:layout_constraintStart_toStartOf="@id/convertedF"
+        android:text="testing"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/convertTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert"
+        app:layout_constraintTop_toBottomOf="@id/kLable"/>
+
+    <Button
+        android:id="@+id/returnTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/returnButton"
+        app:layout_constraintTop_toTopOf="@id/convertTemp"
+        app:layout_constraintBottom_toBottomOf="@+id/convertTemp"
+        app:layout_constraintLeft_toRightOf="@+id/convertTemp"
+        android:layout_marginLeft="30dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
